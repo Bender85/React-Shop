@@ -33,6 +33,7 @@ interface IStateToProps {
   translations: {
     aboutUs: string;
     counter: string;
+    custom: string;
     home: string;
     stars: string;
   };
@@ -65,6 +66,11 @@ class Header extends React.Component<IStateToProps> {
               {translations.stars}
             </ConnectedLink>
           </li>
+          <li>
+            <ConnectedLink activeClassName={classNames.activeLink} routeName={routes.customPage.name}>
+              {translations.custom}
+            </ConnectedLink>
+          </li>
         </ul>
       </nav>
     );
@@ -78,6 +84,7 @@ const componentTranslationsSelector = createSelector(
     return {
       aboutUs: translator.translate("About us"),
       counter: translator.translate("Counter"),
+      custom: translator.translate("Custom"),
       home: translator.translate("Home"),
       stars: translator.translate("Stars")
     };

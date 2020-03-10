@@ -1,9 +1,6 @@
 import * as React from "react";
 import {connect} from "react-redux";
-// import {createSelector} from "reselect";
 import {stylesheet} from "typestyle";
-// import {color} from "../constants"
-// import {IStore} from "../redux/IStore";
 
 const classNames = stylesheet({
   customPage: {

@@ -9,6 +9,7 @@ interface IRoute {
 type RoutablePages = "homePage"
 | "aboutPage"
 | "counterPage"
+| "customPage"
 | "starsPage";
 
 type RouteConfig = Record<RoutablePages, Omit<IRoute, "name">>;
@@ -18,6 +19,7 @@ type RouteNavigate = Record<RoutablePages, (...params: any[]) => Action>;
 const config: RouteConfig = {
   aboutPage: {path: "/about"},
   counterPage: {path: "/counter"},
+  customPage: {path: "/custom"},
   homePage: {path: "/"},
   starsPage: {path: "/stars"}
 };
@@ -40,6 +42,7 @@ const routes = getRoutes();
 export const navigate: RouteNavigate = {
   aboutPage: () => getNavigateAction(routes.aboutPage.name),
   counterPage: () => getNavigateAction(routes.counterPage.name),
+  customPage: () => getNavigateAction(routes.customPage.name),
   homePage: () => getNavigateAction(routes.homePage.name),
   starsPage: () => getNavigateAction(routes.starsPage.name)
 };

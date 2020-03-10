@@ -11,6 +11,7 @@ import {Translator} from "../models/Translator";
 import {ITranslator} from "../models/TranslatorInterfaces";
 import {AboutPage} from "../pages/AboutPage";
 import {CounterPage} from "../pages/CounterPage";
+import {CustomPage} from "../pages/CustomPage";
 import {HomePage} from "../pages/HomePage";
 import {StarsPage} from "../pages/StarsPage";
 import {IStore} from "../redux/IStore";
@@ -39,6 +40,7 @@ class App extends React.Component<IStateToProps> {
   private components: RoutePageMap = {
     aboutPage: AboutPage,
     counterPage: CounterPage,
+    customPage: CustomPage,
     homePage: HomePage,
     starsPage: StarsPage
   };
